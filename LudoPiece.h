@@ -44,7 +44,6 @@ class Piece {
 					while(steps<roll) {
 						if (ExtendedColoredNode* extraNode = dynamic_cast<ExtendedColoredNode*>(position)) {
 							if (extraNode->color == team) {
-								cout<<extraNode->color<<"      "<<team<<endl;
 								position=extraNode->home;
 								relpos++;
 							}
@@ -59,7 +58,6 @@ class Piece {
 								relpos++;
 							} else {
 								if(roll-steps>1) {
-									cout<<"\n\nInvalid Move (More moves than needed to Score a Piece).\nPlease Choose Another Piece."<<endl;
 									position=startpos;
 									relpos=startrel;
 									(*(position->piececount))++;
@@ -76,7 +74,6 @@ class Piece {
 							}
 						}
 						steps++;
-						cout<<steps<<endl;
 					}
 					(*(position->piececount))++;
 					return 1;
