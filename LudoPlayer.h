@@ -103,9 +103,12 @@ class Player {
 					}
 					checktrapped();
 					if(x==0 && !isComp) {
+						cout<<"\n\nInvalid Move (Roll not high enough to Free a Piece).\nPlease Choose Another Piece."<<endl;
+					}
+					if(x==3 && !isComp) {
 						cout<<"\n\nInvalid Move (More moves than needed to Score a Piece).\nPlease Choose Another Piece."<<endl;
 					}
-				} while(x == 0 || trapped);
+				} while(x == 0 || x==3 || trapped);
 				checkplay();
 				return x;
 			} else {

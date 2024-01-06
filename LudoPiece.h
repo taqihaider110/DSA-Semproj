@@ -62,7 +62,7 @@ class Piece {
 									relpos=startrel;
 									(*(position->piececount))++;
 									canmove=false;
-									return 0;
+									return 3;
 								} else {
 									position=position->next;
 									relpos++;
