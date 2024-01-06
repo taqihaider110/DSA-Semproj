@@ -27,7 +27,7 @@ class Board {
 		Node* colorjails[4];
 
 		// Constructor to initialize the circular linked list
-		Board() : head(nullptr), win(nullptr) {
+		Board() : head(NULL), win(NULL) {
 			// Create the circular linked list with the specified pattern
 			createBoard();
 		}
@@ -50,7 +50,7 @@ class Board {
 			int p=71,count=0;
 
 			win = new Node(false);
-			Node *current = win, *curr_line = nullptr;
+			Node *current = win, *curr_line = NULL;
 
 			// Add independent singly linked lists with colors
 
@@ -91,7 +91,7 @@ class Board {
 			// Make it circular
 			head=win->next;
 			current->next = head;
-			win->next = nullptr;
+			win->next = NULL;
 
 			int q=0;
 			current=head;
@@ -120,7 +120,7 @@ class Board {
 			current=current->next;
 			int z=71;
 			Node* l = lines[1];
-			while(l->next!=nullptr) {
+			while(l->next!=NULL) {
 				int bm = *(places[z]);
 //				cout<<z<<"\t"<<places[z]<<"\t"<<bm<<"\t"<<l->piececount<<"\t"<<*(l->piececount)<<"\n";
 				*(places[z])=*(l->piececount);

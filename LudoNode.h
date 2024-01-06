@@ -11,7 +11,7 @@ class Node {
 		Node* next;
 
 		// Constructor
-		Node(bool nodeKill = false) : next(nullptr), kill(nodeKill), piececount(new int) {
+		Node(bool nodeKill = false) : next(NULL), kill(nodeKill), piececount(new int) {
 		}
 
 		// Virtual destructor to make the class polymorphic

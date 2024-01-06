@@ -17,7 +17,7 @@ class Piece {
 		bool inJail=true;	//Shows that this piece is INSIDE jail
 		bool canmove=true;	//Shows that this piece's turn is valid or not
 		
-		Piece(string t="",Node* pos=nullptr, Node* w=nullptr):team(t),position(pos),win(w),start(pos) {}
+		Piece(string t="",Node* pos=NULL, Node* w=NULL):team(t),position(pos),win(w),start(pos) {}
 		
 		int getcaptured(){
 			(*(position->piececount))--;
