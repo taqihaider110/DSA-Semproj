@@ -47,7 +47,7 @@ class Board {
 			*(colorjails[2]->piececount)=4;
 			colorjails[3] = new Node(false);
 			*(colorjails[3]->piececount)=4;
-			int p=72,count=0;
+			int p=71,count=0;
 
 			win = new Node(false);
 			Node *current = win, *curr_line = nullptr;
@@ -122,7 +122,7 @@ class Board {
 			Node* l = lines[1];
 			while(l->next!=nullptr) {
 				int bm = *(places[z]);
-				cout<<z<<"\t"<<places[z]<<"\t"<<bm<<"\t"<<l->piececount<<"\t"<<*(l->piececount)<<"\n";
+//				cout<<z<<"\t"<<places[z]<<"\t"<<bm<<"\t"<<l->piececount<<"\t"<<*(l->piececount)<<"\n";
 				*(places[z])=*(l->piececount);
 				l=l->next;
 				z--;
@@ -138,7 +138,7 @@ class Board {
 		}
 
 		void display() {
-			cout<<"\n\n\n////////////////////////////////////////////////////////////////////////\n";
+			cout<<"////////////////////////////////////////////////////////////////////////\n";
 			cout<<"//                            [NEW TURN]                              //\n";
 			cout<<"////////////////////////////////////////////////////////////////////////\n";
 			UpdatePlaceArr();
@@ -147,26 +147,32 @@ class Board {
 			SetConsoleTextAttribute(hConsole,  WHITE);
 			printf("%2d%2d%2d",*(places[9]),*(places[10]),*(places[11]));
 			SetConsoleTextAttribute(hConsole,  GREEN);
-			printf("          %2d\n",*(colorjails[1]->piececount));
+			printf("          %2d",*(colorjails[1]->piececount));
+			SetConsoleTextAttribute(hConsole,  0);
+			cout<<endl;
 
 			SetConsoleTextAttribute(hConsole,  RED);
 			printf("            ");
 			SetConsoleTextAttribute(hConsole,  WHITE);
 			printf("%2d",*(places[8]));
 			SetConsoleTextAttribute(hConsole,  GREEN);
-			printf("%2d%2d            \n",*(places[66]),*(places[12]));
-
+			printf("%2d%2d            ",*(places[71]),*(places[12]));
+			SetConsoleTextAttribute(hConsole,  0);
+			cout<<endl;
+			
 			for(int  i=0;  i<4;  i++)  {
 				SetConsoleTextAttribute(hConsole,  RED);
 				printf("            ");
 				SetConsoleTextAttribute(hConsole,  WHITE);
 				printf("%2d",*(places[7-i]));
 				SetConsoleTextAttribute(hConsole,  GREEN);
-				printf("%2d",*(places[65-i]));
+				printf("%2d",*(places[70-i]));
 				SetConsoleTextAttribute(hConsole,  WHITE);
 				printf("%2d",*(places[13+i]));
 				SetConsoleTextAttribute(hConsole,  GREEN);
-				printf("            \n");
+				printf("            ");
+				SetConsoleTextAttribute(hConsole,  0);
+				cout<<endl;
 			}
 
 			SetConsoleTextAttribute(hConsole,  WHITE);
@@ -178,18 +184,22 @@ class Board {
 			SetConsoleTextAttribute(hConsole,  CYAN);
 			printf("      ");
 			SetConsoleTextAttribute(hConsole,  WHITE);
-			printf("%2d%2d%2d%2d%2d%2d\n",*(places[17]),*(places[18]),*(places[19]),*(places[20]),*(places[21]),*(places[22]));
-
+			printf("%2d%2d%2d%2d%2d%2d",*(places[17]),*(places[18]),*(places[19]),*(places[20]),*(places[21]),*(places[22]));
+			SetConsoleTextAttribute(hConsole,  0);
+			cout<<endl;
+			
 			SetConsoleTextAttribute(hConsole,  WHITE);
 			printf("%2d",*(places[49]));
 			SetConsoleTextAttribute(hConsole,  RED);
-			printf("%2d%2d%2d%2d%2d",*(places[71]),*(places[70]),*(places[69]),*(places[68]),*(places[67]));
+			printf("%2d%2d%2d%2d%2d",*(places[56]),*(places[55]),*(places[54]),*(places[53]),*(places[52]));
 			SetConsoleTextAttribute(hConsole,  CYAN);
 			printf("  %2d  ",*(win->piececount));
 			SetConsoleTextAttribute(hConsole,  PURPLE);
-			printf("%2d%2d%2d%2d%2d",*(places[57]),*(places[58]),*(places[59]),*(places[60]),*(places[61]));
+			printf("%2d%2d%2d%2d%2d",*(places[62]),*(places[63]),*(places[64]),*(places[65]),*(places[66]));
 			SetConsoleTextAttribute(hConsole,  WHITE);
-			printf("%2d\n",*(places[23]));
+			printf("%2d",*(places[23]));
+			SetConsoleTextAttribute(hConsole,  0);
+			cout<<endl;
 
 			SetConsoleTextAttribute(hConsole,  WHITE);
 			printf("%2d%2d%2d%2d%2d%2d",*(places[48]),*(places[47]),*(places[46]),*(places[45]),*(places[44]),*(places[43]));
@@ -200,7 +210,9 @@ class Board {
 			SetConsoleTextAttribute(hConsole,  PURPLE);
 			printf("%2d",*(places[25]));
 			SetConsoleTextAttribute(hConsole,  WHITE);
-			printf("%2d\n",*(places[24]));
+			printf("%2d",*(places[24]));
+			SetConsoleTextAttribute(hConsole,  0);
+			cout<<endl;
 
 			for(int  i=0;  i<4;  i++)  {
 				SetConsoleTextAttribute(hConsole,  BLUE);
@@ -208,27 +220,33 @@ class Board {
 				SetConsoleTextAttribute(hConsole,  WHITE);
 				printf("%2d",*(places[42-i]));
 				SetConsoleTextAttribute(hConsole,  BLUE);
-				printf("%2d",*(places[53+i]));
+				printf("%2d",*(places[57+i]));
 				SetConsoleTextAttribute(hConsole,  WHITE);
 				printf("%2d",*(places[30+i]));
 				SetConsoleTextAttribute(hConsole,  PURPLE);
-				printf("            \n");
+				printf("            ");
+				SetConsoleTextAttribute(hConsole,  0);
+				cout<<endl;
 			}
 
 			SetConsoleTextAttribute(hConsole,  BLUE);
-			printf("            %2d%2d",*(places[38]),*(places[56]));
+			printf("            %2d%2d",*(places[38]),*(places[61]));
 			SetConsoleTextAttribute(hConsole,  WHITE);
 			printf("%2d",*(places[34]));
 			SetConsoleTextAttribute(hConsole,  PURPLE);
-			printf("            \n");
+			printf("            ");
+			SetConsoleTextAttribute(hConsole,  0);
+			cout<<endl;
 
 			SetConsoleTextAttribute(hConsole,  BLUE);
 			printf("%2d          ",*(colorjails[3]->piececount));
 			SetConsoleTextAttribute(hConsole,  WHITE);
 			printf("%2d%2d%2d",*(places[37]),*(places[36]),*(places[35]));
 			SetConsoleTextAttribute(hConsole,  PURPLE);
-			printf("          %2d\n",*(colorjails[2]->piececount));
-
+			printf("          %2d",*(colorjails[2]->piececount));
+			SetConsoleTextAttribute(hConsole,  15);
+			cout<<endl;
+			
 			SetConsoleTextAttribute(hConsole, 15);
 			return;
 		}
