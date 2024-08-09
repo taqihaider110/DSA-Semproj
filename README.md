@@ -57,15 +57,19 @@ This project implements the classic LUDO board game, showcasing the use of vario
 7. **Final Completion:** 
    - Integrated all modules into a fully functional and playable game.
 
-Main Menu:
+**Main Menu:**
+
 ![Main Menu](https://github.com/user-attachments/assets/325540f9-d69b-4f53-8330-c6f87f1aaa64)
 
-Example Turn:
+**Example Turn:**
+
 ![Example Turn](https://github.com/user-attachments/assets/b0be9d40-86ef-496f-863d-6e85d2c42e68)
 
-After Turn:
+**After Turn:**
+
  ![After Turn](https://github.com/user-attachments/assets/1a81a6db-0a61-4fbf-a711-e44964a76495)
 
-Winner Screen:
+**Winner Screen:**
+
   ![Winner Screen](https://github.com/user-attachments/assets/cf7d06df-71d1-41f2-a7d4-86c64e0f6cd2)
 
